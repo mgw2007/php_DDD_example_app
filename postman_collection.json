@@ -1,0 +1,131 @@
+{
+	"variables": [],
+	"info": {
+		"name": "php_DDD_example_app",
+		"_postman_id": "b73961d6-f03b-bf1d-a0dc-54f1ad67fc80",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost/items",
+			"request": {
+				"url": "http://localhost/items",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "your_secure_token",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"time3\",\n\t\"propTime\":\"03:22\",\n\t\"difficulty\":3,\n\t\"vegetarian\":true\n}"
+				},
+				"description": "Post new item\n\nSecure Request by add header paramater\nAuthorization => \"your_secure_token\""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/items",
+			"request": {
+				"url": "http://localhost/items",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "retrieve all items \nor filter using\nname , propTime , difficulty , vegetarian"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/items/{itemId}",
+			"request": {
+				"url": "http://localhost/items/f029d834-261a-443c-8d19-dcea9cfd4f54",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "return specific item"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/items/{itemId}",
+			"request": {
+				"url": "http://localhost/items/f029d834-261a-443c-8d19-dcea9cfd4f54",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": "",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "your_secure_token",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"newnamzz\",\n\t\"propTime\":\"03:22\",\n\t\"difficulty\":3,\n\t\"vegetarian\":true\n}"
+				},
+				"description": "Put request for make update item\n\nSecure Request by add header paramater\nAuthorization => \"your_secure_token\""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/items/{itemId}/rate",
+			"request": {
+				"url": "http://localhost/items/f029d834-261a-443c-8d19-dcea9cfd4f54/rate",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"rating\": 3\n}"
+				},
+				"description": "add rate to specific item"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/items/f029d834-261a-443c-8d19-dcea9cfd4f54",
+			"request": {
+				"url": "http://localhost/items/f029d834-261a-443c-8d19-dcea9cfd4f54",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "your_secure_token",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Delete Specific Item\nSecure Request by add header paramater\nAuthorization => \"your_secure_token\"\n"
+			},
+			"response": []
+		}
+	]
+}
